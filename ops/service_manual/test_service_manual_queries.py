@@ -1,0 +1,576 @@
+"""
+Test questions for validating service manual search functionality.
+
+This script contains 100 test questions covering various aspects of the service manual:
+- Torque specifications
+- Tool part numbers
+- Assembly/disassembly procedures
+- Technical specifications
+- Maintenance procedures
+- Inspection procedures
+- Special tools
+- Dimensions and clearances
+"""
+
+# Test questions organized by category
+SERVICE_MANUAL_TEST_QUESTIONS = [
+    # ===== TORQUE SPECIFICATIONS (20 questions) =====
+    {
+        "question": "What is the flywheel nut torque specification?",
+        "category": "torque",
+        "expected_keywords": ["flywheel", "nut", "torque", "nm", "ft", "lb"]
+    },
+    {
+        "question": "What torque should I use for the drive sprocket nut?",
+        "category": "torque",
+        "expected_keywords": ["drive sprocket", "nut", "torque", "265", "nm"]
+    },
+    {
+        "question": "What is the tightening torque for the drain plug?",
+        "category": "torque",
+        "expected_keywords": ["drain plug", "torque", "28", "nm"]
+    },
+    {
+        "question": "What torque is required for the oil filter?",
+        "category": "torque",
+        "expected_keywords": ["oil filter", "torque", "18", "nm"]
+    },
+    {
+        "question": "What is the spark plug torque specification?",
+        "category": "torque",
+        "expected_keywords": ["spark plug", "torque", "25", "nm"]
+    },
+    {
+        "question": "What torque should be used for crankcase bolts?",
+        "category": "torque",
+        "expected_keywords": ["crankcase", "bolt", "torque", "nm"]
+    },
+    {
+        "question": "What is the torque specification for connecting rod bolts?",
+        "category": "torque",
+        "expected_keywords": ["connecting rod", "bolt", "torque", "nm"]
+    },
+    {
+        "question": "What torque is needed for the cylinder head cover bolts?",
+        "category": "torque",
+        "expected_keywords": ["cylinder head", "cover", "bolt", "torque"]
+    },
+    {
+        "question": "What is the torque for the timing belt tensioner bolt?",
+        "category": "torque",
+        "expected_keywords": ["timing belt", "tensioner", "bolt", "torque", "40", "nm"]
+    },
+    {
+        "question": "What torque should I use for the tilt ram end screw?",
+        "category": "torque",
+        "expected_keywords": ["tilt ram", "end screw", "torque", "130", "nm"]
+    },
+    {
+        "question": "What is the torque specification for the reservoir cap?",
+        "category": "torque",
+        "expected_keywords": ["reservoir", "cap", "torque", "8", "nm"]
+    },
+    {
+        "question": "What torque is required for the throttle body bolts?",
+        "category": "torque",
+        "expected_keywords": ["throttle body", "bolt", "torque"]
+    },
+    {
+        "question": "What is the torque for the fuel injector bolts?",
+        "category": "torque",
+        "expected_keywords": ["fuel injector", "bolt", "torque"]
+    },
+    {
+        "question": "What torque should be used for the intake manifold bolts?",
+        "category": "torque",
+        "expected_keywords": ["intake manifold", "bolt", "torque"]
+    },
+    {
+        "question": "What is the torque specification for the exhaust manifold?",
+        "category": "torque",
+        "expected_keywords": ["exhaust manifold", "torque"]
+    },
+    {
+        "question": "What torque is needed for the water pump housing bolts?",
+        "category": "torque",
+        "expected_keywords": ["water pump", "housing", "bolt", "torque"]
+    },
+    {
+        "question": "What is the torque for the lower unit bolts?",
+        "category": "torque",
+        "expected_keywords": ["lower unit", "bolt", "torque"]
+    },
+    {
+        "question": "What torque should I use for the bracket unit bolts?",
+        "category": "torque",
+        "expected_keywords": ["bracket unit", "bolt", "torque"]
+    },
+    {
+        "question": "What is the torque specification for the steering arm bolts?",
+        "category": "torque",
+        "expected_keywords": ["steering arm", "bolt", "torque"]
+    },
+    {
+        "question": "What torque is required for the clamp bracket bolts?",
+        "category": "torque",
+        "expected_keywords": ["clamp bracket", "bolt", "torque"]
+    },
+    
+    # ===== TOOL PART NUMBERS (15 questions) =====
+    {
+        "question": "What is the part number for the pressure tester?",
+        "category": "tool_part_number",
+        "expected_keywords": ["pressure tester", "yb-35956", "90890-06762"]
+    },
+    {
+        "question": "What tool part number is YB-35956?",
+        "category": "tool_part_number",
+        "expected_keywords": ["yb-35956", "pressure tester"]
+    },
+    {
+        "question": "What is the part number for the Mity vac tool?",
+        "category": "tool_part_number",
+        "expected_keywords": ["mity vac", "yb-35956", "90890-06756"]
+    },
+    {
+        "question": "What tool is part number 90890-06762?",
+        "category": "tool_part_number",
+        "expected_keywords": ["90890-06762", "pressure tester"]
+    },
+    {
+        "question": "What is the part number for the pinion height gauge?",
+        "category": "tool_part_number",
+        "expected_keywords": ["pinion height gauge", "yb-34432", "90890-06702"]
+    },
+    {
+        "question": "What tool part number is YB-34432-6?",
+        "category": "tool_part_number",
+        "expected_keywords": ["yb-34432-6", "pinion height gauge"]
+    },
+    {
+        "question": "What is the part number for the dial gauge set?",
+        "category": "tool_part_number",
+        "expected_keywords": ["dial gauge", "yu-03097", "90890-01252"]
+    },
+    {
+        "question": "What tool is part number YU-03097?",
+        "category": "tool_part_number",
+        "expected_keywords": ["yu-03097", "dial gauge"]
+    },
+    {
+        "question": "What is the part number for the magnetic base?",
+        "category": "tool_part_number",
+        "expected_keywords": ["magnetic base", "yu-34481", "90890-06705"]
+    },
+    {
+        "question": "What is the part number for the digital caliper?",
+        "category": "tool_part_number",
+        "expected_keywords": ["digital caliper", "90890-06704"]
+    },
+    {
+        "question": "What tool part number is 90890-06704?",
+        "category": "tool_part_number",
+        "expected_keywords": ["90890-06704", "digital caliper"]
+    },
+    {
+        "question": "What is the part number for the backlash indicator?",
+        "category": "tool_part_number",
+        "expected_keywords": ["backlash indicator", "yb-06265", "90890-06706"]
+    },
+    {
+        "question": "What is the part number for the fuel pressure gauge?",
+        "category": "tool_part_number",
+        "expected_keywords": ["fuel pressure gauge", "yb-06766", "90890-06786"]
+    },
+    {
+        "question": "What tool is part number YB-06766?",
+        "category": "tool_part_number",
+        "expected_keywords": ["yb-06766", "fuel pressure gauge"]
+    },
+    {
+        "question": "What is the part number for the hydraulic pressure gauge?",
+        "category": "tool_part_number",
+        "expected_keywords": ["hydraulic pressure gauge", "90890-06776"]
+    },
+    
+    # ===== ASSEMBLY/DISASSEMBLY PROCEDURES (15 questions) =====
+    {
+        "question": "How do I remove the flywheel magnet assembly?",
+        "category": "procedure",
+        "expected_keywords": ["flywheel", "magnet", "assembly", "remove", "procedure"]
+    },
+    {
+        "question": "What is the procedure to install the flywheel magnet assembly?",
+        "category": "procedure",
+        "expected_keywords": ["flywheel", "magnet", "assembly", "install", "procedure"]
+    },
+    {
+        "question": "How do I remove the timing belt?",
+        "category": "procedure",
+        "expected_keywords": ["timing belt", "remove", "procedure"]
+    },
+    {
+        "question": "What is the procedure to install the timing belt?",
+        "category": "procedure",
+        "expected_keywords": ["timing belt", "install", "procedure"]
+    },
+    {
+        "question": "How do I remove the camshafts?",
+        "category": "procedure",
+        "expected_keywords": ["camshaft", "remove", "procedure"]
+    },
+    {
+        "question": "What is the procedure to install the camshafts?",
+        "category": "procedure",
+        "expected_keywords": ["camshaft", "install", "procedure"]
+    },
+    {
+        "question": "How do I remove the cylinder head cover?",
+        "category": "procedure",
+        "expected_keywords": ["cylinder head", "cover", "remove", "procedure"]
+    },
+    {
+        "question": "What is the procedure to remove the power unit?",
+        "category": "procedure",
+        "expected_keywords": ["power unit", "remove", "procedure"]
+    },
+    {
+        "question": "How do I install the power unit?",
+        "category": "procedure",
+        "expected_keywords": ["power unit", "install", "procedure"]
+    },
+    {
+        "question": "What is the procedure to remove the lower unit?",
+        "category": "procedure",
+        "expected_keywords": ["lower unit", "remove", "procedure"]
+    },
+    {
+        "question": "How do I install the lower unit?",
+        "category": "procedure",
+        "expected_keywords": ["lower unit", "install", "procedure"]
+    },
+    {
+        "question": "What is the procedure to remove the water pump?",
+        "category": "procedure",
+        "expected_keywords": ["water pump", "remove", "procedure"]
+    },
+    {
+        "question": "How do I install the water pump?",
+        "category": "procedure",
+        "expected_keywords": ["water pump", "install", "procedure"]
+    },
+    {
+        "question": "What is the procedure to remove the fuel injectors?",
+        "category": "procedure",
+        "expected_keywords": ["fuel injector", "remove", "procedure"]
+    },
+    {
+        "question": "How do I install the fuel injectors?",
+        "category": "procedure",
+        "expected_keywords": ["fuel injector", "install", "procedure"]
+    },
+    
+    # ===== TECHNICAL SPECIFICATIONS (15 questions) =====
+    {
+        "question": "What is the valve clearance specification for intake valves?",
+        "category": "specification",
+        "expected_keywords": ["valve clearance", "intake", "0.20", "mm"]
+    },
+    {
+        "question": "What is the valve clearance for exhaust valves?",
+        "category": "specification",
+        "expected_keywords": ["valve clearance", "exhaust", "0.20", "mm"]
+    },
+    {
+        "question": "What is the cylinder head warpage limit?",
+        "category": "specification",
+        "expected_keywords": ["cylinder head", "warpage", "limit", "0.1", "mm"]
+    },
+    {
+        "question": "What is the piston-to-cylinder clearance specification?",
+        "category": "specification",
+        "expected_keywords": ["piston", "cylinder", "clearance", "0.070", "0.080", "mm"]
+    },
+    {
+        "question": "What is the camshaft journal diameter specification?",
+        "category": "specification",
+        "expected_keywords": ["camshaft", "journal", "diameter", "mm"]
+    },
+    {
+        "question": "What is the crankshaft journal diameter?",
+        "category": "specification",
+        "expected_keywords": ["crankshaft", "journal", "diameter", "47.984", "48.000", "mm"]
+    },
+    {
+        "question": "What is the connecting rod big-end oil clearance?",
+        "category": "specification",
+        "expected_keywords": ["connecting rod", "big-end", "oil clearance", "0.025", "0.031", "mm"]
+    },
+    {
+        "question": "What is the piston ring end gap specification?",
+        "category": "specification",
+        "expected_keywords": ["piston ring", "end gap", "mm"]
+    },
+    {
+        "question": "What is the valve stem diameter specification?",
+        "category": "specification",
+        "expected_keywords": ["valve stem", "diameter", "mm"]
+    },
+    {
+        "question": "What is the valve guide inside diameter?",
+        "category": "specification",
+        "expected_keywords": ["valve guide", "inside diameter", "6.005", "6.018", "mm"]
+    },
+    {
+        "question": "What is the oil pump discharge specification?",
+        "category": "specification",
+        "expected_keywords": ["oil pump", "discharge", "l/min", "5.9"]
+    },
+    {
+        "question": "What is the thermostat opening temperature?",
+        "category": "specification",
+        "expected_keywords": ["thermostat", "opening", "temperature", "50", "celsius"]
+    },
+    {
+        "question": "What is the engine idling speed specification?",
+        "category": "specification",
+        "expected_keywords": ["idling speed", "750", "r/min", "rpm"]
+    },
+    {
+        "question": "What is the gear backlash specification for forward gear?",
+        "category": "specification",
+        "expected_keywords": ["gear backlash", "forward", "0.20", "0.31", "mm"]
+    },
+    {
+        "question": "What is the reverse gear backlash specification?",
+        "category": "specification",
+        "expected_keywords": ["reverse gear", "backlash", "0.50", "0.73", "mm"]
+    },
+    
+    # ===== MAINTENANCE PROCEDURES (10 questions) =====
+    {
+        "question": "How do I check the engine oil level?",
+        "category": "maintenance",
+        "expected_keywords": ["engine oil", "level", "check", "procedure"]
+    },
+    {
+        "question": "What is the procedure to replace the engine oil and oil filter?",
+        "category": "maintenance",
+        "expected_keywords": ["engine oil", "oil filter", "replace", "procedure"]
+    },
+    {
+        "question": "How do I check the timing belt?",
+        "category": "maintenance",
+        "expected_keywords": ["timing belt", "check", "procedure"]
+    },
+    {
+        "question": "What is the procedure to adjust valve clearance?",
+        "category": "maintenance",
+        "expected_keywords": ["valve clearance", "adjust", "procedure"]
+    },
+    {
+        "question": "How do I check the fuel filter?",
+        "category": "maintenance",
+        "expected_keywords": ["fuel filter", "check", "procedure"]
+    },
+    {
+        "question": "What is the procedure to check the fuel pressure?",
+        "category": "maintenance",
+        "expected_keywords": ["fuel pressure", "check", "procedure"]
+    },
+    {
+        "question": "How do I check the cooling water discharge?",
+        "category": "maintenance",
+        "expected_keywords": ["cooling water", "discharge", "check", "procedure"]
+    },
+    {
+        "question": "What is the procedure to check the power trim and tilt fluid level?",
+        "category": "maintenance",
+        "expected_keywords": ["power trim", "tilt", "fluid", "level", "check"]
+    },
+    {
+        "question": "How do I check the gear oil level?",
+        "category": "maintenance",
+        "expected_keywords": ["gear oil", "level", "check", "procedure"]
+    },
+    {
+        "question": "What is the procedure to change the gear oil?",
+        "category": "maintenance",
+        "expected_keywords": ["gear oil", "change", "procedure"]
+    },
+    
+    # ===== INSPECTION PROCEDURES (10 questions) =====
+    {
+        "question": "How do I inspect the impeller housing?",
+        "category": "inspection",
+        "expected_keywords": ["impeller", "housing", "inspect", "check"]
+    },
+    {
+        "question": "What is the procedure to inspect the impeller and impeller housing cup?",
+        "category": "inspection",
+        "expected_keywords": ["impeller", "housing cup", "inspect", "procedure"]
+    },
+    {
+        "question": "How do I check the woodruff key?",
+        "category": "inspection",
+        "expected_keywords": ["woodruff key", "check", "inspect"]
+    },
+    {
+        "question": "What is the procedure to inspect the camshaft?",
+        "category": "inspection",
+        "expected_keywords": ["camshaft", "inspect", "check", "procedure"]
+    },
+    {
+        "question": "How do I check the connecting rod?",
+        "category": "inspection",
+        "expected_keywords": ["connecting rod", "check", "inspect"]
+    },
+    {
+        "question": "What is the procedure to inspect the crankshaft?",
+        "category": "inspection",
+        "expected_keywords": ["crankshaft", "inspect", "check", "procedure"]
+    },
+    {
+        "question": "How do I check the piston rings?",
+        "category": "inspection",
+        "expected_keywords": ["piston ring", "check", "inspect"]
+    },
+    {
+        "question": "What is the procedure to inspect the valves?",
+        "category": "inspection",
+        "expected_keywords": ["valve", "inspect", "check", "procedure"]
+    },
+    {
+        "question": "How do I check the fuel pump?",
+        "category": "inspection",
+        "expected_keywords": ["fuel pump", "check", "inspect", "procedure"]
+    },
+    {
+        "question": "What is the procedure to inspect the tilt ram?",
+        "category": "inspection",
+        "expected_keywords": ["tilt ram", "inspect", "check", "procedure"]
+    },
+    
+    # ===== SPECIAL TOOLS AND EQUIPMENT (10 questions) =====
+    {
+        "question": "What special tools are needed for measuring?",
+        "category": "special_tools",
+        "expected_keywords": ["special tool", "measuring", "pressure tester", "dial gauge"]
+    },
+    {
+        "question": "What tools are required for removing and installing components?",
+        "category": "special_tools",
+        "expected_keywords": ["special tool", "removing", "installing", "component"]
+    },
+    {
+        "question": "What tool is used to measure fuel pressure?",
+        "category": "special_tools",
+        "expected_keywords": ["fuel pressure", "gauge", "yb-06766", "tool"]
+    },
+    {
+        "question": "What tool is needed to measure hydraulic pressure?",
+        "category": "special_tools",
+        "expected_keywords": ["hydraulic pressure", "gauge", "90890-06776", "tool"]
+    },
+    {
+        "question": "What tool is used to measure pinion height?",
+        "category": "special_tools",
+        "expected_keywords": ["pinion height", "gauge", "yb-34432", "tool"]
+    },
+    {
+        "question": "What tool is needed to hold the flywheel during removal?",
+        "category": "special_tools",
+        "expected_keywords": ["flywheel", "holder", "yb-06139", "tool"]
+    },
+    {
+        "question": "What tool is used to remove the flywheel magnet assembly?",
+        "category": "special_tools",
+        "expected_keywords": ["flywheel", "magnet", "puller", "yb-06117", "tool"]
+    },
+    {
+        "question": "What tool is needed to hold the crankshaft?",
+        "category": "special_tools",
+        "expected_keywords": ["crankshaft", "holder", "yb-06552", "tool"]
+    },
+    {
+        "question": "What tool is used to compress piston rings?",
+        "category": "special_tools",
+        "expected_keywords": ["piston ring", "compressor", "yu-33294", "tool"]
+    },
+    {
+        "question": "What tool is needed to measure backlash?",
+        "category": "special_tools",
+        "expected_keywords": ["backlash", "indicator", "yb-06265", "tool"]
+    },
+    
+    # ===== DIMENSIONS AND CLEARANCES (5 questions) =====
+    {
+        "question": "What are the engine dimensions?",
+        "category": "dimensions",
+        "expected_keywords": ["dimension", "mm", "in", "length", "width", "height"]
+    },
+    {
+        "question": "What is the transom height dimension?",
+        "category": "dimensions",
+        "expected_keywords": ["transom", "height", "dimension", "mm", "in"]
+    },
+    {
+        "question": "What are the shaft length options?",
+        "category": "dimensions",
+        "expected_keywords": ["shaft", "length", "l", "x", "mm", "in"]
+    },
+    {
+        "question": "What is the weight of the F115 engine?",
+        "category": "dimensions",
+        "expected_keywords": ["weight", "lbs", "kg", "377", "386"]
+    },
+    {
+        "question": "What are the overall dimensions of the engine?",
+        "category": "dimensions",
+        "expected_keywords": ["dimension", "overall", "mm", "in", "length", "width"]
+    },
+]
+
+
+def get_all_questions():
+    """Return all test questions."""
+    return SERVICE_MANUAL_TEST_QUESTIONS
+
+
+def get_questions_by_category(category: str):
+    """Return questions filtered by category."""
+    return [q for q in SERVICE_MANUAL_TEST_QUESTIONS if q["category"] == category]
+
+
+def get_question_count():
+    """Return the total number of test questions."""
+    return len(SERVICE_MANUAL_TEST_QUESTIONS)
+
+
+def print_questions_summary():
+    """Print a summary of all test questions organized by category."""
+    categories = {}
+    for q in SERVICE_MANUAL_TEST_QUESTIONS:
+        cat = q["category"]
+        if cat not in categories:
+            categories[cat] = []
+        categories[cat].append(q)
+    
+    print("=" * 80)
+    print("SERVICE MANUAL TEST QUESTIONS SUMMARY")
+    print("=" * 80)
+    print(f"Total Questions: {len(SERVICE_MANUAL_TEST_QUESTIONS)}")
+    print()
+    
+    for category, questions in sorted(categories.items()):
+        print(f"{category.upper().replace('_', ' ')}: {len(questions)} questions")
+        for idx, q in enumerate(questions, 1):
+            print(f"  {idx}. {q['question']}")
+        print()
+    
+    print("=" * 80)
+
+
+if __name__ == "__main__":
+    print_questions_summary()
+

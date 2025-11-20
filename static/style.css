@@ -1,0 +1,653 @@
+/* Main background and text colors */
+.stApp {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Main content area */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(135deg, #4c63d2 0%, #5a3d7a 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Title styling */
+h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* General text color for dark theme */
+.main .block-container p,
+.main .block-container div,
+.main .block-container span {
+    color: #e5e7eb;
+}
+
+/* Chat message containers - increase width */
+.stChatMessage {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.3rem !important;
+    margin-top: 0 !important;
+    background: linear-gradient(135deg, #5568d3 0%, #6b4a8a 100%) !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Ensure markdown content within chat messages doesn't overflow */
+.stChatMessage .stMarkdown {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Increase width of element containers holding chat messages */
+[data-testid="element-container"] {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Ensure vertical blocks containing messages use full width */
+[data-testid="stVerticalBlock"] {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Ensure tables within chat messages fit properly */
+.stChatMessage table {
+    max-width: 100% !important;
+    width: 100% !important;
+    table-layout: auto;
+    box-sizing: border-box;
+}
+
+/* Ensure table cells don't overflow and size based on content */
+.stChatMessage table th,
+.stChatMessage table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Make first column (Stop) narrower since it only has numbers */
+.stChatMessage table th:first-child,
+.stChatMessage table td:first-child {
+    width: auto;
+    min-width: 50px;
+    max-width: 80px;
+}
+
+/* Spacing between chat messages */
+[data-testid="stChatMessage"] {
+    margin-bottom: 0.3rem !important;
+    margin-top: 0 !important;
+}
+
+/* Remove gap in chat message container */
+.stChatMessage > div {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Spacing between consecutive messages */
+[data-testid="stChatMessage"] + [data-testid="stChatMessage"] {
+    margin-top: 0.3rem !important;
+}
+
+/* Remove excessive gaps in chat container */
+[data-testid="stVerticalBlock"] > [data-testid="element-container"] {
+    margin-bottom: 0.3rem !important;
+}
+
+/* Small gap in Streamlit's internal containers */
+[data-testid="stVerticalBlock"] {
+    gap: 0.3rem !important;
+}
+
+/* Spacing from element containers */
+[data-testid="element-container"] {
+    margin-bottom: 0.3rem !important;
+}
+
+/* User message styling */
+.stChatMessage[data-testid="user"] {
+    background: linear-gradient(135deg, #5c6fd8 0%, #6d4d8f 100%) !important;
+    border-left: 4px solid #667eea;
+    color: #ffffff;
+}
+
+/* Assistant message styling */
+.stChatMessage[data-testid="assistant"] {
+    background: linear-gradient(135deg, #5568d3 0%, #6b4a8a 100%) !important;
+    border-left: 4px solid #764ba2;
+    color: #ffffff;
+}
+
+/* Markdown content in messages */
+.stChatMessage .stMarkdown,
+.stChatMessage .stMarkdown p,
+.stChatMessage .stMarkdown div {
+    color: #e5e7eb !important;
+}
+
+/* User message text */
+[data-testid="stChatMessage"]:has(div[data-testid="user"]) .stMarkdown,
+[data-testid="stChatMessage"]:has(div[data-testid="user"]) .stMarkdown p {
+    color: #ffffff !important;
+}
+
+/* Chat input styling - simple and clean */
+.stChatInput {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.stChatInput > div {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.stChatInput > div > div {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 25px;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    position: relative !important;
+    padding: 0.5rem 1rem !important;
+    padding-right: 3.5rem !important;
+    transition: none !important;
+}
+
+/* Maintain original appearance on ALL states - prevent ANY color change */
+.stChatInput > div > div:focus,
+.stChatInput > div > div:focus-within,
+.stChatInput > div > div:active,
+.stChatInput > div > div:hover,
+.stChatInput > div > div:focus-visible {
+    background: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+/* Remove any pseudo-elements that might create double round shapes */
+.stChatInput > div > div::before,
+.stChatInput > div > div::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Remove any inner shadows or overlays */
+.stChatInput > div > div > div::before,
+.stChatInput > div > div > div::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Remove box-shadow from nested elements */
+.stChatInput > div > div > div {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Remove any background overlays or nested rounded shapes */
+.stChatInput > div > div > div:first-child {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* Remove borders from nested containers that might create double shapes */
+.stChatInput > div > div > div {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* Keep border-radius only on the outer container */
+.stChatInput > div > div {
+    border-radius: 25px !important;
+}
+
+/* Make InputInstructions element transparent - this is between text and button */
+.stChatInput [data-testid="InputInstructions"],
+.stChatInput .st-emotion-cache-12o5wl7,
+.stChatInput .exaa2ht4,
+.stChatInput > div > div > div:nth-child(2) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+}
+
+/* Make textarea container take full width */
+.stChatInput [data-baseweb="textarea"],
+.stChatInput [data-baseweb="base-input"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Style send button to float over input box at extreme right */
+.stChatInput button[data-testid="stChatInputSubmitButton"],
+.stChatInput .st-emotion-cache-sey4o0,
+.stChatInput .exaa2ht3 {
+    position: absolute !important;
+    right: 0.5rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0.5rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Ensure button icon is visible */
+.stChatInput button[data-testid="stChatInputSubmitButton"] svg {
+    color: rgba(255, 255, 255, 0.8) !important;
+    fill: rgba(255, 255, 255, 0.8) !important;
+}
+
+.stChatInput button[data-testid="stChatInputSubmitButton"]:hover svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* Simple input field styling */
+.stChatInput input,
+.stChatInput textarea {
+    color: #ffffff !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Remove focus outline that might create visual artifacts */
+.stChatInput input:focus,
+.stChatInput textarea:focus,
+.stChatInput [data-baseweb="textarea"]:focus,
+.stChatInput [data-baseweb="base-input"]:focus,
+.stChatInput [data-baseweb="textarea"]:focus-within,
+.stChatInput [data-baseweb="base-input"]:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Remove focus effects from all nested elements - maintain original styling */
+.stChatInput > div > div:focus-within {
+    background: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+.stChatInput > div > div:focus-within > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.stChatInput > div > div:focus-within textarea,
+.stChatInput > div > div:focus-within input {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Prevent any Streamlit default focus styles from changing the input appearance */
+.stChatInput > div > div *:focus,
+.stChatInput > div > div *:focus-within,
+.stChatInput > div > div *:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: inherit !important;
+    background-color: inherit !important;
+}
+
+/* Override any Streamlit emotion cache classes that might change background */
+.stChatInput [class*="emotion"]:focus,
+.stChatInput [class*="emotion"]:focus-within,
+.stChatInput [class*="emotion"]:active {
+    background: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure the input container always maintains its distinct appearance */
+.stChatInput > div > div,
+.stChatInput > div > div * {
+    transition: none !important;
+}
+
+.stChatInput input::placeholder,
+.stChatInput textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Reduce vertical size of bottom container (white/gradient area) - minimal */
+[data-testid="stAppViewContainer"] > [data-testid="stVerticalBlock"]:last-child {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+[data-testid="stVerticalBlock"]:has(.stChatInput) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+[data-testid="element-container"]:has(.stChatInput) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Further reduce spacing around chat input container */
+[data-testid="stVerticalBlock"] > [data-testid="element-container"]:has(.stChatInput) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove all spacing from containers holding chat input */
+[data-testid="stAppViewContainer"] [data-testid="stVerticalBlock"]:has(.stChatInput) {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+}
+
+[data-testid="stAppViewContainer"] [data-testid="element-container"]:has(.stChatInput) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Style the bottom container that holds chat input - match dashboard theme */
+.stBottom,
+[data-testid="stBottom"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+[data-testid="stBottomBlockContainer"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Style parent containers of the bottom area */
+.stBottom > div,
+[data-testid="stBottom"] > div {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Target all nested containers within bottom - make transparent to show parent background */
+.stBottom div,
+[data-testid="stBottom"] div {
+    background: transparent !important;
+}
+
+/* Ensure the bottom block container and its children have theme background */
+[data-testid="stBottomBlockContainer"] > div {
+    background: transparent !important;
+}
+
+/* Style the main app view container that spans the whole page */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+section[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Ensure all vertical blocks and containers have theme background */
+[data-testid="stVerticalBlock"] {
+    background: transparent !important;
+}
+
+/* Remove white backgrounds from all element containers */
+[data-testid="element-container"] {
+    background: transparent !important;
+}
+
+/* Ensure the bottom area (where chat input is) has theme background */
+[data-testid="stAppViewContainer"] > [data-testid="stVerticalBlock"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Main background and text colors */
+html, body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Ensure all Streamlit containers have the theme background */
+#root {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Remove any white backgrounds from Streamlit's default containers */
+.stApp > div {
+    background: transparent !important;
+}
+
+/* Ensure all nested divs are transparent to show parent background */
+.stApp > div > div {
+    background: transparent !important;
+}
+
+/* Remove any white backgrounds from the main block container */
+.main {
+    background: transparent !important;
+}
+
+/* Info boxes */
+.stInfo {
+    background: linear-gradient(135deg, #5568d3 0%, #6b4a8a 100%);
+    border-left: 4px solid #667eea;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* Error boxes */
+.stError {
+    background: linear-gradient(135deg, #6b4a8a 0%, #7a3d5a 100%);
+    border-left: 4px solid #764ba2;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* Spinner styling */
+.stSpinner > div {
+    border-top-color: #6366f1;
+}
+
+/* Markdown tables */
+.stChatMessage table,
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #5568d3 0%, #6b4a8a 100%);
+    table-layout: auto;
+}
+
+/* Ensure table cells wrap text properly and size based on content */
+table th,
+table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Make first column (Stop) narrower since it only has numbers */
+table th:first-child,
+table td:first-child {
+    width: auto;
+    min-width: 50px;
+    max-width: 80px;
+}
+
+table th {
+    background: #667eea !important;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #7a5fa8;
+    font-size: 0.85rem !important;
+}
+
+table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #6b4a8a;
+    color: #ffffff;
+    font-size: 0.8rem !important;
+}
+
+table tr:hover {
+    background: linear-gradient(135deg, #5c6fd8 0%, #6d4d8f 100%);
+}
+
+/* Code blocks */
+code {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+pre {
+    background: linear-gradient(135deg, #5568d3 0%, #6b4a8a 100%);
+    color: #ffffff;
+    border: 1px solid #667eea;
+}
+
+/* Remove Streamlit branding and menu */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Hide the menu button (hamburger menu) */
+.stDeployButton {display: none;}
+
+/* Hide the header toolbar */
+header[data-testid="stHeader"] {display: none;}
+
+/* Hide any link buttons in the header */
+.stApp > header > div:first-child {display: none;}
+
+/* Hide the menu button specifically */
+button[title="View app source"] {display: none;}
+button[title="Settings"] {display: none;}
+
+/* Hide header completely */
+#stAppViewContainer > header {display: none !important;}
+
+/* Title with logo container */
+.title-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title-with-logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.title-with-logo h1 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Align columns vertically - ensure logo and title are on same line */
+[data-testid="column"] {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Ensure logo column aligns to top */
+[data-testid="column"]:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ensure title column aligns to same baseline */
+[data-testid="column"]:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.5rem !important;
+}
+
+/* Reduce gap between columns */
+[data-testid="column"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Header area at top of page */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem 2rem;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Add padding to body to account for fixed header */
+.main .block-container {
+    padding-top: 6rem;
+}
+
+/* Hide Streamlit header to use custom header */
+header[data-testid="stHeader"] {
+    display: none;
+}
+
+

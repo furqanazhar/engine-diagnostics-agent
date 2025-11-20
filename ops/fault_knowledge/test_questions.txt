@@ -1,0 +1,145 @@
+# Sample Test Questions for F115 Engine Diagnostic Agent
+# Generated from f115_fault_knowledge_base_formatted.txt
+
+## Single Fault Questions (Symptoms-based)
+
+1. My engine is hard to start and surges when I give it throttle. What could be wrong?
+
+2. The oil level keeps rising and I smell fuel in the oil. What's causing this?
+
+3. My engine stalls at idle and the idle RPM is erratic. Sometimes it only idles with the throttle cracked open.
+
+4. The engine surges at idle and hesitates when I shift into gear. What should I check?
+
+5. I'm not getting any charging voltage. The voltage regulator connector looks melted. What's the issue?
+
+6. The engine overheats at idle but seems fine at higher speeds. What could cause this?
+
+7. My trim/tilt moves very slowly and makes a labored sound. It works better when the engine is warm.
+
+8. The engine breaks up at high RPM and I'm getting low charging voltage. What's wrong?
+
+9. The engine randomly cuts out and stalls when it gets hot. It won't restart until it cools down.
+
+10. One cylinder keeps misfiring at mid-range and the spark plug is wet. What should I check?
+
+11. I'm getting multiple random electrical issues - ECU resets, weak spark, trim/tilt is intermittent. What's the problem?
+
+12. The engine won't crank. It only cranks when I push the control lever. What could this be?
+
+13. I hear a single click but the starter doesn't turn. The battery is strong. What's wrong?
+
+14. The starter cranks very slowly, especially when the engine is hot. What should I check?
+
+15. One cylinder is dead intermittently. When I wiggle the injector harness, the RPM changes. What's the issue?
+
+16. The engine never reaches operating temperature and uses excessive fuel. What could cause this?
+
+17. The engine runs cool at idle but overheats at cruise or wide open throttle. What's happening?
+
+18. The primer bulb collapses and the engine dies after running at speed. What should I check?
+
+19. When I open the fuel cap, there's a strong vacuum sound. The engine loses power after several minutes.
+
+20. The engine runs fine at idle but stalls at midrange. I see aerated fuel in the clear hoses.
+
+21. I'm losing top-end power and the RPM is stuck 1000-1500 below normal. Fuel rail pressure drops under throttle.
+
+22. The high-pressure fuel pump is silent when I turn the key on. Sometimes it primes, sometimes it doesn't.
+
+23. There's a strong fuel smell at the exhaust and one cylinder runs rich. The spark plug is wet.
+
+24. The main fuse keeps blowing. Sometimes it blows as soon as I turn the key on.
+
+25. The charging voltage fluctuates and the rectifier plug is hot. The tachometer bounces or drops out.
+
+## Multi-Fault Questions (Mixed Symptoms)
+
+26. My engine is hard to start, surges, and I'm also seeing the oil level rise with fuel smell. What could be multiple issues?
+
+27. The engine stalls at idle, overheats, and I'm getting low charging voltage. What are the possible problems?
+
+28. I have erratic idle RPM, the engine overheats at idle, and the trim/tilt is slow. What should I check?
+
+29. The engine won't start, the starter clicks but doesn't turn, and I'm seeing multiple electrical issues. What's going on?
+
+30. I'm experiencing surging, low rail pressure, and the engine dies when shifting into gear. What could be wrong?
+
+31. The engine overheats, stalls at idle, and I'm getting weak charging. Are these related issues?
+
+32. I have hard starting, surging, and the primer bulb collapses. What are the potential causes?
+
+33. The engine runs cold, uses excessive fuel, and I'm seeing fuel dilution in the oil. What should I investigate?
+
+34. I'm getting misfires, weak charging, and the engine cuts out when hot. What are the possible faults?
+
+35. The engine won't crank, I'm getting electrical issues, and the charging voltage is erratic. What's happening?
+
+## Diagnostic Procedure Questions
+
+36. How do I test if the VST filter is clogged?
+
+37. What's the procedure to diagnose a fuel dilution problem?
+
+38. How do I check if the IAC valve is working properly?
+
+39. What tests should I perform to diagnose an overheating issue?
+
+40. How do I test the trim/tilt system to find the problem?
+
+41. What's the diagnostic procedure for a stator failure?
+
+42. How do I check if a pulser coil is failing?
+
+43. What tests should I run to diagnose ignition coil problems?
+
+44. How do I test the main engine ground connection?
+
+45. What's the procedure to diagnose a neutral safety switch issue?
+
+46. How do I test the starter relay?
+
+47. What diagnostic steps should I follow for injector harness problems?
+
+48. How do I check if thermostats are stuck open?
+
+49. What's the procedure to diagnose a poppet valve issue?
+
+50. How do I test for anti-siphon valve problems?
+
+## Parts and Fix Questions
+
+51. What parts do I need to fix a VST filter clogging issue?
+
+52. What parts are required to fix fuel dilution problems?
+
+53. What should I replace if the IAC valve fails?
+
+54. What parts are needed to fix an overheating problem?
+
+55. What components should I check for trim/tilt issues?
+
+## Preventive Maintenance Questions
+
+56. How often should I replace the VST filter?
+
+57. What preventive maintenance should I do to avoid fuel dilution?
+
+58. How can I prevent IAC valve failures?
+
+59. What maintenance prevents overheating issues?
+
+60. How do I prevent trim/tilt problems?
+
+## General Diagnostic Questions
+
+61. My Yamaha F115 engine is having problems. Where should I start diagnosing?
+
+62. What are the most common issues with F115 outboard engines?
+
+63. I'm experiencing multiple symptoms. How do I narrow down the problem?
+
+64. What tools do I need for engine diagnostics?
+
+65. How do I interpret diagnostic codes from the ECU?
+

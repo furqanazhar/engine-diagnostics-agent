@@ -1,0 +1,117 @@
+I’m developing the most comprehensive AI-powered outboard engine diagnostic system ever built — trained on every single workshop manual ever written and thousands of real-world fault cases gathered from 50 years of marine experience.
+
+I need a talented engineer to structure the database and retrieval system (RAG setup) so the AI can pull brand-specific info and respond like a real marine engineer, not a generic chatbot.
+
+You’ll set up:
+
+A vector database for semantic search (e.g. Pinecone, Weaviate, or Qdrant).
+
+A PostgreSQL (or similar) metadata layer to store structured info (brand, HP, fuel system, etc).
+
+A clean API layer (FastAPI or Node) that:
+
+Retrieves matching chunks from manuals and real-world data.
+
+Passes that context to the LLM for diagnosis.
+
+
+
+If you’ve worked with LangChain or LlamaIndex, even better — but no need for overengineering. Keep it clean, modular, and easy to expand.
+
+for poc we need to provide all info surrounding just a single model of outboard. so we will take the yamaha f115a model for this proof. i will provide you with t3 sources of information - he workshop repair manual, the parts list, and a csv of commonly occurring faults.
+
+workshop manual https://drive.google.com/file/d/1PHK6ZD9F3Puu1sXc-W0RS0mbSkqKmMYR/view?usp=sharing
+
+parts list: https://drive.google.com/file/d/10p_3Qi0yxoWEv_opTUc5s4_usXr6wN-x/view?usp=sharing
+Google Docs
+F115AET_68V_28197_ZA_C1.PDF
+Google Docs
+F115AET-FL115AET-F115TR-LF115TR-TRG_08.pdf
+common faults for this model attached, theres an excel and a json - use whichever works best for you
+Attachment file type: spreadsheet
+f115_faults.xlsx
+19.04 KB
+Attachment file type: unknown
+f115_fault_knowledge_base.jsonl
+26.74 KB
+Here’s a rough example of the kind of data and queries I have in mind:
+
+Sample “manual chunk” (conceptually):
+
+Engine: Yamaha F90 4-stroke
+
+Section: Torque Specs
+
+Content (example):
+“Flywheel nut torque: 145 Nm (14.5 m·kg, 107 ft·lb). Always use a calibrated torque wrench and new tab washer.”
+
+Another example chunk:
+
+Engine: Yamaha F90 4-stroke
+
+Section: Ignition System
+
+Content:
+“Ignition coil primary resistance: 0.16–0.24 Ω at 20 °C. Secondary resistance: 3.6–5.4 kΩ. Measure between terminals X and Y as shown in the diagram.”
+
+And a more diagnostic-style chunk:
+
+Engine: Yamaha F90 4-stroke
+
+Section: Troubleshooting – Engine stalls
+
+Content:
+“If engine stalls after idling for several minutes but restarts when throttle is opened, likely causes are:
+
+Idle jet / pilot circuit restriction
+
+Air leak at intake gasket
+
+Incorrect idle speed setting.
+Check fuel varnish in carburettor, spray around intake gasket for RPM change, and verify idle RPM vs spec.”
+
+Example user queries + expected type of result:
+
+Query:
+“On a Yamaha F90, what’s the correct flywheel nut torque?”
+
+Expected response shape:
+
+Answer: “145 Nm (14.5 m·kg, 107 ft·lb)”
+
+Short explanation: “This is from the torque specs section of the F90 workshop manual.”
+
+Source: section/page reference if possible.
+
+Query:
+“My Yamaha F90 runs fine at speed but stalls after 5–10 minutes at idle and then restarts if I open the throttle. What should I check first?”
+
+Expected response shape:
+
+Likely causes (ranked: e.g. idle jet restriction, intake air leak, idle speed too low)
+
+3–5 concrete checks (e.g. inspect for varnish, spray-test around intake gasket, check idle RPM vs spec)
+
+Any relevant spec values pulled from the manual if needed.
+
+Query:
+“How do I check the ignition coil on this F90 – what resistance values am I looking for?”
+
+Expected response shape:
+
+Primary and secondary resistance ranges
+
+Where to put the meter probes (described in text)
+
+Any cautions (e.g. measure at 20 °C, disconnect connector first).
+
+No need to focus on UI or the image extraction/embeddings
+Just text only
+Look into MinerU and OLMOCR
+Or similar pre processing tools to first extract markdowns
+
+POC but not a proposal. We have to give the client a working solution
+
+We basically have these 3 data sources
+And the 2 links here
+Filhaal in this POC just focus on these 3

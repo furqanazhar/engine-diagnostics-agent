@@ -1,0 +1,310 @@
+{
+  "id": "f115_fault_01",
+  "fault": "VST filter clogged / white powder contamination",
+  "symptoms": "Hard starting; surging; stalls after throttle; low/erratic rail pressure; WOT power loss; primer bulb soft; rail pressure drop under load.",
+  "reported_fix": "Clean VST, replace VST filter and HP pump inlet screen, flush tank/lines, install Yamaha 10µm filter, consider injector flow test.",
+  "parts_used": "VST filter 68V‑13915‑00; HP pump inlet screen; 10µm inline filter 68V‑24502‑02‑00; injector screen kit.",
+  "preventive_notes": "Drain/clean tank annually; run high-quality fuel; avoid stale ethanol; replace 10µm filter annually; periodic VST service.",
+  "diagnostic_procedure": "1) Rail pressure test: idle ~36 PSI, load drop >4 PSI = restriction.\n2) Prime bulb: RPM recovery indicates LP/VST restriction.\n3) Vacuum test before VST: >3\" Hg = restriction upstream.\n4) Drain VST: check for white/grey silt, rust, hose debris.\n5) Inspect HP pump inlet screen for coating/cavitation.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_02",
+  "fault": "'Making oil' / fuel dilution",
+  "symptoms": "Rising oil level; fuel smell in oil; foamy/milky oil; rough cold idle; excessive steam; stalling after long idle.",
+  "reported_fix": "Replace thermostats, LP pump diaphragm, perform injector leak-down test, change oil.",
+  "parts_used": "Thermostats 68V‑12411‑00/01; LP pump diaphragm kit; injector service/flow test.",
+  "preventive_notes": "Replace thermostats every 2 seasons; avoid extended idling; run engine to full operating temp regularly.",
+  "diagnostic_procedure": "1) Check operating temperature: <50°C = stuck-open stats.\n2) Inspect LP pump pulse line: fuel present = diaphragm breach.\n3) Injector leak-down: >5 PSI drop or wet plug = leaking injector.\n4) Dipstick smell/texture test confirms dilution.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_03",
+  "fault": "Idle Air Control (IAC) failure",
+  "symptoms": "Stalling at idle; idle hunting; blown 10A fuse; erratic idle RPM; engine only idles with throttle cracked.",
+  "reported_fix": "Replace IAC valve and fuse; clean IAC passages; check for vacuum leaks.",
+  "parts_used": "IAC valve 68V‑1312A‑00‑00; 10A engine fuse.",
+  "preventive_notes": "Avoid jump-start spikes; check/clean grounds.",
+  "diagnostic_procedure": "1) Inspect 10A fuse: instant blow = IAC short.\n2) Unplug IAC: if fuse stops blowing → confirmed IAC fault.\n3) Command IAC with YDS to check pintle movement.\n4) Listen for startup buzz; silence = dead IAC.\n5) Spray test for vacuum leaks around IAC port.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_04",
+  "fault": "Throttle Position Sensor (TPS) out of spec",
+  "symptoms": "Idle surge; hesitation; poor WOT; stumble into gear; surging at 1500–3000 RPM.",
+  "reported_fix": "Reset TPS voltage or replace sensor; sync throttle valves.",
+  "parts_used": "TPS sensor; harness test pigtail.",
+  "preventive_notes": "Check TPS annually; avoid stressing harness; do not force throttle plate by hand.",
+  "diagnostic_procedure": "1) Backprobe idle voltage: target 0.62–0.68V.\n2) Sweep throttle: smooth, linear voltage rise required.\n3) Wiggle harness: flicker indicates connector/pin issue.\n4) Check for ECU TPS error code/history.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_05",
+  "fault": "Voltage regulator/rectifier (VRR) failure",
+  "symptoms": "No charging; >15V overcharge; melted VRR connector; fluctuating accessories; ECU resets.",
+  "reported_fix": "Replace VRR; repair connector; clean grounds; verify stator output.",
+  "parts_used": "VRR assembly; rectifier connector repair kit.",
+  "preventive_notes": "Maintain good battery health; dielectric grease VRR plug; check grounds annually.",
+  "diagnostic_procedure": "1) Charging volts check: <13V or >15V = VRR fault.\n2) Test stator AC output with VRR unplugged.\n3) Inspect VRR plug for heat damage.\n4) Voltage-drop test engine ground (<0.2V ideal).\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_06",
+  "fault": "Overheating at idle or after WOT",
+  "symptoms": "Weak or steaming tell‑tale; overheat alarm; RPM limiting (guardian mode); temperature spike after high‑RPM run; cool tell‑tale but hot block; overheats only at idle or only at cruise depending on component.",
+  "reported_fix": "Replace water pump kit (impeller, wear plate, cup); replace thermostats; service or replace poppet valve; clear salt/debris from tell‑tale and cooling passages.",
+  "parts_used": "Water pump kit; thermostats; poppet valve diaphragm and spring; gasket set.",
+  "preventive_notes": "Replace impeller yearly; flush engine after every saltwater use; inspect tell‑tale monthly; replace thermostat every 2 seasons.",
+  "diagnostic_procedure": "1) Check tell‑tale: weak/steamy flow indicates partial blockage.\n2) IR temperature scan at cylinder head: >85°C at idle suggests thermostat/passage issue.\n3) Idle overheat but good at speed → thermostat stuck closed or clogged tell‑tale.\n4) Overheat at cruise but normal at idle → poppet stuck closed.\n5) Drop lower unit, inspect impeller for missing vanes.\n6) Back‑flush block using hose adapter to clear salt/sand.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_07",
+  "fault": "Stalls during deceleration or when shifting into gear",
+  "symptoms": "Engine dies coming off plane; stalls entering gear; unstable idle; low RPM in gear; hesitation when returning to idle speed.",
+  "reported_fix": "Clean VST screens; clean/flow injectors; adjust IAC duty cycle; reset TPS; sync throttle plates.",
+  "parts_used": "IAC valve (if faulty); TPS; VST filters; injector service kits.",
+  "preventive_notes": "Keep fuel system clean; annual VST service; avoid idling excessively without periodic throttle application.",
+  "diagnostic_procedure": "1) Check idle RPM in gear: lower than spec → IAC issue or dirty VST.\n2) Inspect VST inlet screen for varnish restricting fuel.\n3) Activate IAC with diagnostic tool; confirm smooth RPM adjustment.\n4) TPS voltage verification and sweep test.\n5) Inspect for vacuum leaks around intake.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_08",
+  "fault": "Low‑pressure (LP) lift pump diaphragm leak",
+  "symptoms": "Engine surges at midrange; RPM falls gradually; primer bulb must be pumped to stay running; fuel smell near intake; fuel visible in pulse line.",
+  "reported_fix": "Replace LP pump diaphragm or full pump assembly; replace fuel lines if degraded.",
+  "parts_used": "LP pump diaphragm kit; LP pump assembly; ethanol‑safe fuel hose.",
+  "preventive_notes": "Use ethanol‑resistant hose; replace primer bulb every 2–3 years; inspect pulse line annually.",
+  "diagnostic_procedure": "1) Remove pulse line: presence of fuel confirms diaphragm rupture.\n2) Install vacuum gauge pre‑VST: vacuum collapse under load = LP pump weakness.\n3) Pump primer bulb: engine recovery suggests LP side issue.\n4) Inspect fuel hoses for collapse or softening.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_09",
+  "fault": "Injector micro‑filters clogged or restricted",
+  "symptoms": "Uneven plug colour; rough idle; intermittent misfire; reduced WOT; heavier fuel burn; hesitation at throttle-up.",
+  "reported_fix": "Ultrasonic clean injectors; replace micro‑filters and seals; clean VST and replace filters to prevent re‑contamination.",
+  "parts_used": "Injector screen kits; O‑rings; seals; VST filter; HP pump inlet screen.",
+  "preventive_notes": "Use 10µm filtration; avoid outdated ethanol fuel; clean VST every 2 seasons.",
+  "diagnostic_procedure": "1) Remove and inspect spark plugs for uneven colour.\n2) Swap injectors between cylinders to see if misfire follows.\n3) Professional flow test to measure balance (should be within 2–3%).\n4) Inspect VST debris level to prevent re-clogging.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_10",
+  "fault": "Dry exhaust / mid‑section corrosion (F115A common issue)",
+  "symptoms": "Louder exhaust note; fumes in cowling; water dripping from midsection; rust flakes visible from exhaust ports; engine struggling to idle due to exhaust leak.",
+  "reported_fix": "Install Yamaha mid‑section repair kit; replace corroded exhaust housing; reseal exhaust passages; replace failed gaskets.",
+  "parts_used": "Exhaust housing repair kit; mid‑section gaskets; fasteners; corrosion‑resistant sealant.",
+  "preventive_notes": "Flush engine thoroughly; avoid beaching in abrasive sand; inspect mid‑section annually for corrosion trails.",
+  "diagnostic_procedure": "1) Remove lower unit and visually inspect exhaust housing.\n2) Pressure test cooling passage for leaks.\n3) Look for burnt paint, bubbling corrosion or salt scaling.\n4) Use borescope in midsection to confirm crack/perforation.\n5) Replace housing or fit repair kit.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_11",
+  "fault": "Oil pan corrosion (common on older 68V F115A)",
+  "symptoms": "Oil weeping around lower crankcase; dark oily residue in water; oil smell after running; oil loss without external line failure; rust flakes on pan lip.",
+  "reported_fix": "Replace oil pan and gasket; clean mating surfaces; apply corrosion‑resistant sealant; inspect for water intrusion sources.",
+  "parts_used": "Oil pan assembly; oil pan gasket; stainless fasteners; corrosion inhibitor.",
+  "preventive_notes": "Rinse engine thoroughly after saltwater use; do not store with standing water around mid‑section; apply anti‑corrosion spray annually.",
+  "diagnostic_procedure": "1) Degrease and run engine briefly to pinpoint fresh oil.\n2) Use UV dye if leak source unclear.\n3) Inspect lower pan area for bubbling paint and rust bloom.\n4) Remove pan and check for pinholes.\n5) Install new pan and gasket with correct torque pattern.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_12",
+  "fault": "Trim/tilt slow or weak in one or both directions",
+  "symptoms": "Trim moves slowly; laboured sound from motor; stops under load; works better when engine is warm; difference in speed up vs down.",
+  "reported_fix": "Replace trim motor; clean high‑current connections; replace relay pack if switching failure; bleed hydraulic system; reseal rams if bypassing.",
+  "parts_used": "Trim/tilt motor; relay pack; ram seal kit; ATF‑type hydraulic fluid.",
+  "preventive_notes": "Keep T/T unit free of salt buildup; operate trim regularly to prevent internal varnish; inspect relay pack annually.",
+  "diagnostic_procedure": "1) Voltage test at trim motor during operation.\n   - <10.5V under load = wiring/relay issue.\n2) Direct‑jump trim motor at plug.\n   - Normal speed = relay fault.\n   - Still slow = motor worn.\n3) Inspect hydraulic fluid for aeration/milkiness.\n4) Check ram shafts for scoring causing bypass.\n5) Command trim repeatedly to verify consistent relay switching.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_13",
+  "fault": "Stator failure (weak charging + misfire at high RPM)",
+  "symptoms": "Low charging voltage (12–13V); weak or intermittent spark; engine breaks up at high RPM; occasional no‑start; erratic tachometer readings.",
+  "reported_fix": "Replace stator assembly; clean flywheel magnets; inspect wiring harness for heat damage.",
+  "parts_used": "Stator assembly 68V‑81410‑00; flywheel key; dielectric grease.",
+  "preventive_notes": "Maintain battery health to reduce stator load; ensure flywheel stays corrosion‑free.",
+  "diagnostic_procedure": "1) Measure stator AC output at idle and 2000+ RPM.\n2) Compare to Yamaha spec (uneven output indicates coil failure).\n3) Inspect coils for dark/burn marks.\n4) Test resistance hot vs cold for heat‑related dropouts.\n5) Replace if below spec or intermittent.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_14",
+  "fault": "Pulser coil intermittent (heat‑related timing dropout)",
+  "symptoms": "Random cut‑out; stalls when hot; timing inconsistent; longer crank time; engine won't restart until cooled.",
+  "reported_fix": "Replace pulser coil; clean flywheel pickup surface; verify correct air gap.",
+  "parts_used": "Pulser coil; mounting hardware.",
+  "preventive_notes": "Keep flywheel and pickup surfaces clean; avoid corrosion under mounts which alters gap.",
+  "diagnostic_procedure": "1) Test pulser coil resistance cold vs hot.\n2) Check timing stability with timing light.\n3) Look for sudden timing jumps indicating pulser dropout.\n4) Use heat gun on coil—failure under heat confirms diagnosis.\n5) Replace coil and set correct air gap.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_15",
+  "fault": "Ignition coil breakdown under load",
+  "symptoms": "Misfire at mid‑range or WOT; one plug consistently wet; engine shakes at idle but improves slightly with throttle; misfire worsens under load.",
+  "reported_fix": "Replace ignition coil and boot; clean ground connection; inspect plug for fouling.",
+  "parts_used": "Ignition coil; spark plug; coil boot; dielectric grease.",
+  "preventive_notes": "Replace plugs annually; prevent water intrusion around coil mounts.",
+  "diagnostic_procedure": "1) Swap suspect coil with another cylinder.\n   - Misfire follows → confirmed coil failure.\n2) Inspect spark plug colour (wet or carbon‑fouled = poor ignition).\n3) Check coil primary/secondary resistance.\n4) Inspect coil boot for moisture contamination.\n5) Replace coil and re‑test under load.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_16",
+  "fault": "Corroded main engine ground (high resistance ground fault)",
+  "symptoms": "Multiple random electrical issues; intermittent ECU resets; weak or inconsistent spark; trim/tilt intermittent; sensors showing false readings; erratic charging voltage.",
+  "reported_fix": "Clean and retorque main engine ground; remove corrosion; replace ground strap if damaged; apply dielectric grease to prevent recurrence.",
+  "parts_used": "Ground strap; stainless ground bolt; dielectric grease; wire brush.",
+  "preventive_notes": "Inspect ground connection annually; avoid salt buildup; protect with corrosion inhibitor.",
+  "diagnostic_procedure": "1) Perform voltage‑drop test from battery negative to engine block while cranking.\n   - >0.2V drop = excessive ground resistance.\n2) Remove ground bolt and inspect for corrosion, paint, or oxidation.\n3) Clean contact surfaces to bare metal.\n4) Reinstall with corrosion‑resistant grease.\n5) Re‑test voltage drop — must be <0.1V when fixed.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_17",
+  "fault": "Neutral safety switch misalignment or failure",
+  "symptoms": "Engine will not crank; intermittent crank; crank only when pushing control lever; difficulty engaging neutral; inconsistent neutral indication.",
+  "reported_fix": "Adjust or replace neutral safety switch; lubricate shift linkage; repair wiring if damaged.",
+  "parts_used": "Neutral safety switch; linkage grease; connector repair pins.",
+  "preventive_notes": "Avoid forcing control; lubricate linkage annually; check switch alignment after cable replacements.",
+  "diagnostic_procedure": "1) Attempt crank in neutral while gently moving control lever.\n   - If engine cranks in certain lever positions → switch misaligned.\n2) Test continuity across switch in neutral.\n3) Inspect control box for worn shift cam.\n4) Replace switch if intermittent or worn.\n5) Re‑adjust linkage for precise neutral engagement.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_18",
+  "fault": "Starter relay (solenoid) failure",
+  "symptoms": "Single click but no crank; intermittent crank; starter engages weakly; strong battery but starter does not turn; relay hot to the touch.",
+  "reported_fix": "Replace starter relay; clean battery and starter cables; inspect for corrosion at solenoid terminals.",
+  "parts_used": "Starter relay/solenoid; terminal nuts; dielectric grease.",
+  "preventive_notes": "Keep relay area dry; maintain battery health; clean terminals yearly.",
+  "diagnostic_procedure": "1) Voltage‑drop test across relay while attempting to crank.\n   - >0.5V drop indicates failing relay.\n2) Jump relay with insulated screwdriver.\n   - Starter spins normally → relay is faulty.\n3) Check relay coil resistance.\n4) Inspect relay terminals for heat damage.\n5) Replace relay and retest crank performance.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_19",
+  "fault": "Starter motor worn brushes or weak armature",
+  "symptoms": "Slow crank, especially when hot; intermittent no‑crank; starter spins but fails under compression; click‑pause‑slow rotation behaviour.",
+  "reported_fix": "Rebuild starter (brushes + commutator service) or replace complete starter; clean and tighten starter ground and power cables.",
+  "parts_used": "Starter motor assembly; brush kit; armature if needed; solenoid (optional).",
+  "preventive_notes": "Avoid extended cranking; maintain good battery voltage; inspect starter annually on high‑hour engines.",
+  "diagnostic_procedure": "1) Load‑test battery to confirm >9.6V during crank.\n2) Bench test starter: weak spin indicates worn brushes.\n3) Inspect brushes for length and spring pressure.\n4) Clean commutator and check armature continuity.\n5) Replace or rebuild starter and re‑test under load.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_20",
+  "fault": "Corroded injector harness connector (signal dropout)",
+  "symptoms": "Intermittent dead cylinder; random misfire; injector clicks faintly or not at all; wiggle harness causes RPM changes; uneven idle quality.",
+  "reported_fix": "Replace corroded pins; clean connector; re‑pin harness; apply dielectric grease.",
+  "parts_used": "Connector pin kit; injector plug; dielectric grease; harness repair loom.",
+  "preventive_notes": "Grease connectors annually; avoid washing engine with high‑pressure water; inspect after winter lay‑up.",
+  "diagnostic_procedure": "1) Wiggle test injector harness while idling.\n   - RPM fluctuation confirms connector issue.\n2) Inspect plug pins for green/white corrosion.\n3) Check injector signal with noid light.\n4) Re‑pin connector if weak tension or corrosion present.\n5) Retest injector operation and cylinder balance.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_21",
+  "fault": "Thermostats stuck open (engine runs cold)",
+  "symptoms": "Engine never reaches correct operating temperature; excessive fuel consumption; rough idle when cold; ‘making oil’ tendency; weak heater output on diagnostic muffs; idle RPM unstable during warmup.",
+  "reported_fix": "Replace both thermostats; clean thermostat seats; verify temperature with IR gun; clear any scale buildup around housings.",
+  "parts_used": "Thermostats 68V‑12411‑00 and 68V‑12411‑01; housing gaskets; stainless bolts.",
+  "preventive_notes": "Replace thermostats every 2 seasons; flush engine thoroughly after salt use; avoid long idling when engine is cold.",
+  "diagnostic_procedure": "1) Use IR thermometer at thermostat covers—should stabilise approx. 60–70°C.\n2) If temperature stays below 50°C → thermostats stuck open.\n3) Inspect idle quality—cold running causes unstable AFR.\n4) Remove stats and inspect for scale/corrosion.\n5) Replace thermostats and recheck warm‑up profile.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_22",
+  "fault": "Poppet valve stuck open (overheats at high RPM only)",
+  "symptoms": "Engine runs cool at idle but overheats at cruise or WOT; overheat alarm during acceleration; normal tell‑tale flow; temperature slowly climbs only under load.",
+  "reported_fix": "Replace poppet valve diaphragm and spring; clean valve seat; clear salt or sand buildup; inspect cooling passages.",
+  "parts_used": "Poppet valve kit; diaphragm; spring; gasket; cooling passage sealant.",
+  "preventive_notes": "Flush engine after use; avoid operating in silty or sandy shallows; inspect poppet every 2–3 seasons.",
+  "diagnostic_procedure": "1) IR scan: normal idle temperature but rising temp at 4000+ RPM indicates stuck poppet.\n2) Remove poppet cover and inspect diaphragm for stiffness or tearing.\n3) Check seat for sand/salt buildup.\n4) Replace poppet components.\n5) Water‑test to confirm high‑RPM cooling restored.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_23",
+  "fault": "Anti‑siphon valve restriction (fuel starvation at sustained RPM)",
+  "symptoms": "Primer bulb collapses; engine dies after running at speed; RPM slowly drops under load; engine recovers after opening fuel cap; WOT fuel starvation.",
+  "reported_fix": "Replace anti‑siphon valve; remove debris in pickup barb; clean or replace tank vent if contributing.",
+  "parts_used": "Anti‑siphon valve; pickup tube fitting; ethanol‑safe hose; vent screen.",
+  "preventive_notes": "Replace ASV every 5 years; inspect tank vent annually; avoid leaving fuel to stale.",
+  "diagnostic_procedure": "1) Squeeze primer bulb at fault—collapsing bulb = vacuum in tank/ASV restriction.\n2) Open fuel cap: if engine instantly recovers → vent or ASV fault.\n3) Remove ASV and blow through it—sticking or heavy resistance confirms issue.\n4) Replace ASV and test under load.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_24",
+  "fault": "Blocked tank vent (vacuum lock)",
+  "symptoms": "Fuel tank vacuum sound when opening cap; primer bulb collapses; engine loses power after several minutes; stalls and restarts only after venting; strong vacuum feeling at cap.",
+  "reported_fix": "Clean or replace tank vent; clear vent hose kink; replace vent screen; check for wasp nests or salt blockage.",
+  "parts_used": "Tank vent assembly; vent hose; vent screen; hose clamps.",
+  "preventive_notes": "Regularly clear vent screens; replace kinked hoses; ensure no tight bends during rigging.",
+  "diagnostic_procedure": "1) Open fuel cap during fault—instant improvement confirms vent blockage.\n2) Blow through vent hose—restriction indicates blockage.\n3) Inspect vent screen for salt crust.\n4) Replace vent assembly if airflow remains restricted.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_25",
+  "fault": "Fuel pickup tube cracked or loose",
+  "symptoms": "Engine runs fine at idle but stalls at midrange; aerated fuel in clear hoses; loss of prime; engine dies after hitting waves; primer bulb fails to stay firm.",
+  "reported_fix": "Replace pickup tube; inspect tank fitting; ensure pickup reaches tank bottom; replace degraded fuel hoses.",
+  "parts_used": "Pickup tube; anti‑siphon valve (if integrated); tank fitting; hose; clamps.",
+  "preventive_notes": "Use ethanol‑resistant components; check tank fittings yearly; avoid impact on fuel tank fittings.",
+  "diagnostic_procedure": "1) Remove pickup and inspect for cracks, splits, and loose joints.\n2) Submerge pickup in water and pressurise lightly—bubbles indicate leaks.\n3) Replace tube and ensure proper length to tank floor.\n4) Test fuel flow with clear line for bubbles.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_26",
+  "fault": "High‑pressure fuel pump weak (low rail pressure under load)",
+  "symptoms": "Loss of top‑end power; RPM stuck 1000–1500 below normal; surging at mid‑range; hard starting after long sit; fuel rail pressure drops under throttle; engine may stumble when accelerating.",
+  "reported_fix": "Replace HP pump; replace HP pump inlet screen; clean VST; verify proper LP pump output; flow‑test injectors if contamination occurred.",
+  "parts_used": "High‑pressure fuel pump assembly; inlet micro‑screen; VST gasket; injector seals.",
+  "preventive_notes": "Replace 10µm filter annually; avoid letting fuel sit for months; perform VST service every 2 seasons; keep water out of fuel system.",
+  "diagnostic_procedure": "1) Fit fuel rail pressure gauge.\n   - Idle: ~36 PSI.\n   - Load: any drop >4 PSI indicates HP pump or restriction.\n2) Check HP pump prime sound—weak or delayed hum = failing pump.\n3) Inspect HP inlet screen for varnish or debris.\n4) Test LP pump output to eliminate upstream restriction.\n5) Replace HP pump if pressure cannot be maintained under load.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_27",
+  "fault": "HP pump relay failure (no prime / random cut‑out)",
+  "symptoms": "HP pump silent at key‑on; intermittent no‑start; engine stalls randomly; relay hot to touch; pump primes only sometimes; ECU may show lean spikes.",
+  "reported_fix": "Replace fuel pump relay; clean relay contacts; inspect harness for overheating; verify battery voltage and grounds.",
+  "parts_used": "Fuel pump relay; relay socket pins; dielectric grease.",
+  "preventive_notes": "Avoid moisture intrusion into relay box; replace aged relays every few seasons; ensure battery voltage stable.",
+  "diagnostic_procedure": "1) Key‑on: listen for 2–3 second HP pump prime.\n2) Swap relay with identical known‑good relay.\n3) Check relay coil voltage.\n4) Inspect for heat discoloration at relay pins.\n5) Replace relay if pump primes consistently after swap.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_28",
+  "fault": "Leaking injector causing rich idle / fuel dilution",
+  "symptoms": "Strong fuel smell at exhaust; one cylinder runs rich; plug wet on affected cylinder; rough idle; high fuel burn; oil level rising if severe.",
+  "reported_fix": "Rebuild or replace injector; replace micro‑filter and seals; perform professional injector cleaning; change contaminated oil.",
+  "parts_used": "Injector rebuild kit; micro‑filter; seals; spark plug.",
+  "preventive_notes": "Use high‑quality fuel; run engine regularly; service injectors every 300–500 hours.",
+  "diagnostic_procedure": "1) Leak‑down test: rail pressurised, monitor pressure drop.\n2) Remove spark plugs—wet plug indicates leaking injector.\n3) Swap injector between cylinders—rich condition follows faulty injector.\n4) Perform flow and leak test at injector specialist.\n5) Replace seals and confirm even cylinder balance after repair.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_29",
+  "fault": "Blown engine fuse due to harness short",
+  "symptoms": "Sudden engine shutdown; no power to ECU; blown main fuse repeatedly; no crank/no start; sometimes fuse blows as soon as key is turned on.",
+  "reported_fix": "Trace and repair shorted section of harness; replace chafed wires; repair melted connectors; replace fuse after fix ONLY.",
+  "parts_used": "Fuse; harness repair wire; heat‑shrink; connector pins.",
+  "preventive_notes": "Inspect harness annually; secure loose wiring; avoid pinch points under cowling.",
+  "diagnostic_procedure": "1) Replace fuse and turn key—if it blows instantly, short is on key‑on circuit.\n2) Inspect IAC, injector, and trim harness areas for chafing.\n3) Use continuity mode to find ground‑shorted circuit.\n4) Wiggle harness while monitoring continuity.\n5) Repair damaged wire and confirm fuse holds under load.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_30",
+  "fault": "Corroded rectifier plug (erratic charging + intermittent power loss)",
+  "symptoms": "Charging voltage fluctuates; intermittent low voltage warnings; rectifier plug hot; engine misbehaves when electrical load increases; tachometer bounce or drop‑outs.",
+  "reported_fix": "Replace corroded plug and terminals; clean rectifier pins; replace VRR if damaged by heat; correct any poor grounding.",
+  "parts_used": "Rectifier plug repair kit; VRR (if heat‑damaged); dielectric grease; terminal extractors.",
+  "preventive_notes": "Apply dielectric to VRR plug annually; keep charging system dry; inspect plug any time charging issues appear.",
+  "diagnostic_procedure": "1) Inspect VRR connector for browning or melted sections.\n2) Voltage test charging system—fluctuation indicates poor connection.\n3) Check continuity through plug—high resistance = corrosion.\n4) Replace pins and plug body.\n5) Re‑test charging under various loads.",
+  "tags": "yamaha,f115,68V,outboard"
+}
+{
+  "id": "f115_fault_31",
+  "fault": "Faulty head gasket",
+  "symptoms": "Idle runs too slow/rough; low pressure in cylinders (compression test needed); holes and debris in and around head gasket; engine bogging down; excessive vibrations; water and contaminants entering engine; poor performance.",
+  "reported_fix": "Replace head gasket; clean mating surfaces; ensure proper torque sequence; replace every 4 years of service or 200 hours of operation (whichever comes first); for average boater: 50 hours per season.",
+  "parts_used": "Head gasket; gasket sealant; head bolts (if required); coolant.",
+  "preventive_notes": "Replace head gasket every 4 years or 200 hours of operation; avoid overheating; maintain proper cooling system; use quality coolant; inspect during regular maintenance.",
+  "diagnostic_procedure": "1) Perform compression test on all cylinders—low pressure indicates gasket failure.\n2) Visual inspection of head gasket for holes, debris, or signs of failure.\n3) Check for water in oil or oil in coolant—indicates gasket breach.\n4) Inspect cylinder head and block mating surfaces for warping or damage.\n5) Replace gasket following proper torque sequence and specifications.\n",
+  "tags": "yamaha,f115,68V,outboard"
+}
